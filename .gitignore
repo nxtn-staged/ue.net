@@ -3,6 +3,7 @@
 
 !*.md
 
+!*.ini
 !*.uplugin
 
 !.git*
