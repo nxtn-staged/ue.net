@@ -1,11 +1,17 @@
 *
 !*/
 
+!*.cpp
+!*.h
+
+!*.cs
+
 !*.md
 
 !*.ini
 !*.uplugin
 
 !.git*
+!.github/**
 
 !LICENSE.TXT

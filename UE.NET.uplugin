@@ -7,5 +7,18 @@
 	"Category": "Scripting",
 	"CreatedBy": "NextTurn",
 	"CreatedByURL": "https://github.com/NextTurn/UE.NET",
-	"EnabledByDefault": true
+	"EnabledByDefault": true,
+	"Modules": [
+		{
+			"Name": "LefticeRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"WhitelistPlatforms": [
+				"Win32",
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		}
+	]
 }
