@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NextTurn.UE.Runtime\NextTurn.UE.Runtime.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NextTurn.Project">
+      <HintPath>C:\Users\Liim\Documents\Unreal Projects\MyProject\Binaries\UE.NET\NextTurn.Project.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

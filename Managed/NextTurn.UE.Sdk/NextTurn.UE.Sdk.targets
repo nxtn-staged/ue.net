@@ -1,0 +1,18 @@
+<Project>
+
+  <PropertyGroup>
+    <TaskFramework Condition="'$(MSBuildRuntimeType)'=='Core'">$(TargetFramework)</TaskFramework>
+    <TaskFramework Condition="'$(MSBuildRuntimeType)'!='Core'">netstandard2.0</TaskFramework>
+  </PropertyGroup>
+
+  <UsingTask TaskName="NextTurn.UE.Sdk.Processor" AssemblyFile="$(ArtifactsBinDir)NextTurn.UE.Sdk\$(Configuration)\$(TaskFramework)\NextTurn.UE.Sdk.dll" />
+
+  <Target
+    Name="PostProcess"
+    AfterTargets="CoreCompile"
+    Inputs="@(IntermediateAssembly)"
+    Outputs="@(IntermediateAssembly->'%(FullPath).timestamp')">
+    <Processor AssemblyFile="@(IntermediateAssembly)" />
+  </Target>
+
+</Project>

@@ -6,6 +6,17 @@
     <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)CodeAnalysis.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <ArtifactsDir>$(MSBuildThisFileDirectory)artifacts\</ArtifactsDir>
+    <ArtifactsBinDir>$(ArtifactsDir)bin\</ArtifactsBinDir>
+    <ArtifactsObjDir>$(ArtifactsDir)obj\</ArtifactsObjDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BaseOutputPath>$(ArtifactsBinDir)$(MSBuildProjectName)\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(ArtifactsObjDir)$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
   </ItemGroup>

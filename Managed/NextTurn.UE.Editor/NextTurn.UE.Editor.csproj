@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <PackageReference Include="NextTurn.UE.Analyzers" Version="1.0.0" /> -->
+    <!-- <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.261" /> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NextTurn.UE.Runtime\NextTurn.UE.Runtime.csproj" />
+    <ProjectReference Include="..\NextTurn.UE.Sdk\NextTurn.UE.Sdk.csproj" />  
+  </ItemGroup>
+
+  <Import Project="..\NextTurn.UE.Sdk\NextTurn.UE.Sdk.targets" />
+
+</Project>

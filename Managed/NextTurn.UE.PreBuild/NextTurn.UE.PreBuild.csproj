@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <DotNetAppHostVersion>5.0.0</DotNetAppHostVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.DotNetAppHost" Version="$(DotNetAppHostVersion)" />
+  </ItemGroup>
+
+  <Target Name="Messages" AfterTargets="Restore">
+
+    <!-- https://github.com/dotnet/sdk/issues/9518 -->
+    <Error Condition="$(RuntimeIdentifiers) == ''" Text="'RuntimeIdentifiers' must be specified." />
+
+    <PropertyGroup>
+      <LinkTimeLibraryExtension Condition="$(RuntimeIdentifiers.StartsWith('win'))">.lib</LinkTimeLibraryExtension>
+      <LinkTimeLibraryExtension Condition="$(LinkTimeLibraryExtension) == ''">.a</LinkTimeLibraryExtension>
+
+      <NetHostDirectory>$(NuGetPackageRoot)runtime.$(RuntimeIdentifiers).Microsoft.NETCore.DotNetAppHost\$(DotNetAppHostVersion)\runtimes\$(RuntimeIdentifiers)\native\</NetHostDirectory>
+      <!--<NetHostLinkTimeFile>$(NetHostDirectory)libnethost$(LinkTimeLibraryExtension)</NetHostLinkTimeFile>-->
+      <NetHostLinkTimeFile>$(NetHostDirectory)nethost$(LinkTimeLibraryExtension)</NetHostLinkTimeFile>
+    </PropertyGroup>
+
+    <Message Importance="high" Text=".NET Host directory      : $(NetHostDirectory)" />
+    <Message Importance="high" Text=".NET Host link-time file : $(NetHostLinkTimeFile)" />
+
+  </Target>
+
+</Project>

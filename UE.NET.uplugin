@@ -6,7 +6,7 @@
 	"Description": ".NET for Unreal Engine",
 	"Category": "Scripting",
 	"CreatedBy": "NextTurn",
-	"CreatedByURL": "https://github.com/NextTurn/UE.NET",
+	"CreatedByURL": "https://github.com/NextTurn/ue.net",
 	"EnabledByDefault": true,
 	"SupportedTargetPlatforms": [
 		"Win32",
@@ -19,17 +19,17 @@
 	],
 	"Modules": [
 		{
-			"Name": "LefticeScript",
+			"Name": "NextTurnScript",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "LefticeScriptGenerator",
+			"Name": "NextTurnScriptGenerator",
 			"Type": "Program",
 			"LoadingPhase": "PostConfigInit"
 		},
 		{
-			"Name": "LefticeRuntime",
+			"Name": "NextTurnRuntime",
 			"Type": "Runtime",
 			"LoadingPhase": "PreDefault"
 		}
