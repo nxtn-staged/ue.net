@@ -1,0 +1,11 @@
+{
+	"FileVersion": 3,
+	"Version": 0,
+	"VersionName": "0.0",
+	"FriendlyName": "UE.NET",
+	"Description": ".NET for Unreal Engine",
+	"Category": "Scripting",
+	"CreatedBy": "NextTurn",
+	"CreatedByURL": "https://github.com/NextTurn/UE.NET",
+	"EnabledByDefault": true
+}

@@ -1,0 +1,8 @@
+*
+!*/
+
+!*.uplugin
+
+!.git*
+
+!LICENSE.TXT
