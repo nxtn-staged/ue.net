@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="StyleCop.Analyzers" ToolsVersion="16.0">
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA0001" Action="None" /> <!-- XML comment analysis disabled -->
+    <Rule Id="SA1009" Action="None" /> <!-- Closing parenthesis should be spaced correctly -->
+    <Rule Id="SA1128" Action="None" /> <!-- Generic type constraints should be on their own line -->
+    <Rule Id="SA1201" Action="None" /> <!-- Elements should appear in the correct order -->
+    <Rule Id="SA1202" Action="None" /> <!-- Elements should be ordered by access -->
+    <Rule Id="SA1405" Action="None" /> <!-- Debug.Assert should provide message text -->
+    <Rule Id="SA1600" Action="None" /> <!-- Elements should be documented -->
+    <Rule Id="SA1602" Action="None" /> <!-- Enumeration items should be documented -->
+  </Rules>
+</RuleSet>

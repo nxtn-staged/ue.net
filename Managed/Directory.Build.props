@@ -1,0 +1,13 @@
+<Project>
+
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
+  </ItemGroup>
+
+</Project>

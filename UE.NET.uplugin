@@ -8,17 +8,30 @@
 	"CreatedBy": "NextTurn",
 	"CreatedByURL": "https://github.com/NextTurn/UE.NET",
 	"EnabledByDefault": true,
+	"SupportedTargetPlatforms": [
+		"Win32",
+		"Win64",
+		"Mac",
+		"Linux"
+	],
+	"SupportedPrograms": [
+		"UnrealHeaderTool"
+	],
 	"Modules": [
+		{
+			"Name": "LefticeScript",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "LefticeScriptGenerator",
+			"Type": "Program",
+			"LoadingPhase": "PostConfigInit"
+		},
 		{
 			"Name": "LefticeRuntime",
 			"Type": "Runtime",
-			"LoadingPhase": "PreDefault",
-			"WhitelistPlatforms": [
-				"Win32",
-				"Win64",
-				"Mac",
-				"Linux"
-			]
+			"LoadingPhase": "PreDefault"
 		}
 	]
 }

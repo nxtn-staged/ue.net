@@ -1,5 +1,5 @@
 // Copyright (c) NextTurn.
-// See the LICENSE file in the project root for more information.
+// See the LICENSE.TXT file in the project root for more information.
 
 namespace UnrealBuildTool.Rules
 {
@@ -9,14 +9,43 @@ namespace UnrealBuildTool.Rules
 		{
 			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-			PrivatePCHHeaderFile = "Private/LefticeRuntimePrivatePCH.h";
+			PrivatePCHHeaderFile = "Private/LefticeRuntimePrivatePCH.hpp";
 
-			PublicDependencyModuleNames.AddRange(
+			PublicDependencyModuleNames.Add(
+				"Core"
+			);
+
+			PrivateDependencyModuleNames.AddRange(
 				new[]
 				{
-					"Core"
+					"CoreUObject",
 				}
 			);
+
+			if (Target.bCompileAgainstApplicationCore)
+			{
+				PrivateDependencyModuleNames.AddRange(
+					new[]
+					{
+						"Slate",
+						"SlateCore",
+					}
+				);
+			}
+
+			if (Target.bBuildEditor)
+			{
+				PrivateDependencyModuleNames.AddRange(
+					new[]
+					{
+						"EditorStyle",
+						"LevelEditor",
+						"MainFrame",
+						"UnrealEd",
+					}
+				);
+			}
+
 		}
 	}
 }

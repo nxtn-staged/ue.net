@@ -2,9 +2,14 @@
 !*/
 
 !*.cpp
-!*.h
+!*.hpp
 
 !*.cs
+!*.csproj
+!*.props
+!*.targets
+
+!*.ruleset
 
 !*.md
 
@@ -15,3 +20,11 @@
 !.github/**
 
 !LICENSE.TXT
+
+# Build results
+Intermediate/
+bin/
+obj/
+
+# Test results
+TestResults/

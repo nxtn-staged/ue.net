@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Leftice.Runtime\Leftice.Runtime.csproj" />
+    <ProjectReference Include="..\Leftice.Editor\Leftice.Editor.csproj" />
+  </ItemGroup>
+
+</Project>
